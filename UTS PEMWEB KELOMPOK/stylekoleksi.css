@@ -1,0 +1,75 @@
+
+       /* CSS untuk Halaman Parfum (about.html) yang Disingkat */
+/* Reset dan General Styling */
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+:root{
+    --primary-color: #333;--secondary-color: #555;--text-light: #f4f4f4;
+    --background-dark: #161616; /* Menggunakan #161616 agar konsisten dengan sebelumnya */
+    --button-bg: #fff;--button-text: #333;--accent-color: #a37627;
+}
+html{scroll-behavior:smooth}
+body{background-color:var(--background-dark);color:var(--text-light);line-height:1.6}
+
+/* Header dan Navigasi */
+header{
+    background-color: #000;padding: 15px 50px;display: flex;justify-content: space-between;
+    align-items: center;position: fixed;width: 100%;z-index: 1000;
+}
+.logo a{font-size:24px;font-weight:bold;color:var(--text-light);text-decoration:none}
+.header-right-nav{display:flex;align-items:center;gap:30px}
+.header-right-nav nav ul{list-style:none;display:flex;gap:30px}
+.header-right-nav nav ul li a{
+    color:var(--text-light);text-decoration:none;font-size:14px;text-transform:uppercase;
+    letter-spacing:1px;padding:5px 0;transition:color .3s;
+}
+.header-right-nav nav ul li a:hover{color:#aaa}
+.header-icons{display:flex;align-items:center;gap:20px}
+.header-icons a{color:var(--text-light);text-decoration:none}
+.header-icons .icon{font-size:20px;cursor:pointer;transition:color .3s}
+.header-icons .icon:hover{color:#aaa}
+
+
+/* Konten Halaman Umum */
+.content-section {
+    padding: 100px 50px;min-height: 100vh;background-color: #161616; 
+}
+.content-section h1 {
+    text-align: center;margin-bottom: 50px;font-size: 36px;color: var(--text-light);
+}
+
+/* Halaman Parfum (Grid Produk) */
+.perfume-grid {
+    display: grid;grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;max-width: 1200px;margin: 0 auto;
+}
+.perfume-card {
+    background-color: #ffffff;padding: 20px;border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-left: 5px solid var(--accent-color);
+    display: flex;flex-direction: column;align-items: center;
+}
+.perfume-card img {
+    max-width: 100%;height: 200px;object-fit: contain;
+    margin-bottom: 15px;border-radius: 4px;
+}
+.perfume-card h3, .perfume-card h4, .perfume-card p {
+    color: #000000;text-align: center;
+}
+.perfume-card h3 {
+    margin-bottom: 10px;font-size: 22px;
+}
+.perfume-card h4 {
+    margin-top: 15px;font-size: 15px;
+}
+.perfume-card p {
+    font-size: 14px;margin-bottom: 15px;
+}
+
+/* Daftar Notes (Aroma) */
+.notes-list {
+    list-style: none;font-size: 13px;margin-top: 5px;
+    padding-left: 0;text-align: left;width: 100%;color: #000000;
+}
+.notes-list li {
+    margin-bottom: 3px;color: #000000;
+}

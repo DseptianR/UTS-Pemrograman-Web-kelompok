@@ -1,0 +1,160 @@
+        /* CSS untuk Halaman Kontak (contact.html) yang Disingkat */
+/* Reset dan Variabel */
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+:root{
+    --primary-color: #333;--secondary-color: #555;--text-light: #f4f4f4;
+    --background-dark: #161616; /* Disesuaikan ke 161616 untuk konsistensi konten */
+    --button-text: #ffffff;--accent-color: #a37627;
+}
+body{
+    background-color: var(--background-dark);color:var(--text-light);
+    line-height:1.6;min-height:100vh;
+}
+
+/* Header dan Navigasi */
+header{
+    background-color: rgba(0, 0, 0, 0.7);padding: 15px 50px;display: flex;
+    justify-content: space-between;align-items: center;position: fixed;
+    width: 100%;z-index: 1000;
+}
+.logo a{font-size:24px;font-weight:bold;color:var(--text-light);text-decoration:none}
+.header-right-nav{display:flex;align-items:center;gap:30px}
+.header-right-nav nav ul{list-style:none;display:flex;gap:30px}
+.header-right-nav nav ul li a{
+    color:var(--text-light);text-decoration:none;font-size:14px;text-transform:uppercase;
+    letter-spacing:1px;padding:5px 0;transition:color .3s;
+}
+.header-right-nav nav ul li a:hover{color:#aaa}
+.header-icons, .header-icons a{display:flex;align-items:center;gap:20px;color:var(--text-light);text-decoration:none}
+.header-icons .icon{font-size:20px;cursor:pointer;transition:color .3s}
+.header-icons .icon:hover{color:#aaa}
+
+/* Konten Utama Halaman Kontak */
+.content-section {
+    padding-top: 100px;min-height: 100vh;display: flex;flex-direction: column;
+    align-items: center;background-color: var(--background-dark);
+}
+.content-section h1 {
+    text-align: center;margin-bottom: 10px;font-size: 36px;color: var(--text-light);
+}
+.content-section > p { /* Deskripsi di bawah judul */
+    text-align: center;margin-bottom: 30px;color: #ccc;
+}
+
+/* Container dan Form Kontak */
+.contact-container {
+    max-width: 600px;width: 90%;margin: 0 auto 50px; /* Menambahkan margin bawah */
+    background-color: #4a4a4a;padding: 40px;border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;margin-bottom: 5px;font-weight: bold;font-size: 14px;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;padding: 10px;border: 1px solid #555;background-color: #555;
+    color: var(--text-light);border-radius: 4px;box-sizing: border-box;
+    font-size: 14px;
+}
+.form-group textarea {
+    resize: vertical;min-height: 120px;
+}
+
+/* Tombol Kirim */
+.submit-btn {
+    width: 100%;padding: 12px;background-color: var(--accent-color);
+    color: var(--button-text);border: none;cursor: pointer;border-radius: 4px;
+    font-size: 16px;text-transform: uppercase;font-weight: bold;
+    transition: background-color 0.3s;
+}
+.submit-btn:hover {
+    background-color: #8c764e;
+}
+
+/* --- Gaya Error Inline (Merah) --- */
+.error-text {
+    color: #ff3333; /* Merah cerah */
+    font-size: 0.85em;
+    margin-top: 5px;
+    display: block; /* Memastikan pesan berada di baris baru */
+    font-weight: 500;
+    transition: opacity 0.3s;
+    opacity: 0; /* Sembunyikan secara default */
+}
+
+/* Gaya saat Input Error */
+.form-group input:invalid:not(:placeholder-shown), 
+.form-group textarea:invalid:not(:placeholder-shown) {
+    border-color: #ff3333;
+}
+
+/* --- Gaya Pop-up Sukses (Hijau) Estetis --- */
+.popup-container {
+    display: none; /* Sembunyikan secara default */
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay gelap */
+    backdrop-filter: blur(3px); /* Efek blur pada latar belakang */
+}
+
+.popup-content {
+    background-color: #ffffff;
+    margin: 15% auto; /* Tengah vertikal */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    transform: scale(0.9);
+    animation: fadeInScale 0.3s forwards;
+}
+
+.popup-content.success {
+    border-top: 5px solid #28a745; /* Garis hijau di atas */
+}
+
+.popup-content i {
+    font-size: 4em;
+    color: #28a745; /* Warna hijau */
+    margin-bottom: 15px;
+}
+
+.popup-content h2 {
+    color: #155724;
+    margin-top: 0;
+}
+
+.popup-content p {
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.close-btn:hover {
+    background-color: #1e7e34;
+}
+
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
