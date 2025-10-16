@@ -163,7 +163,7 @@ header.scrolled{background:rgba(0,0,0,.55);backdrop-filter:blur(6px)}
   background:linear-gradient(135deg,rgba(163,139,93,.18),rgba(255,255,255,.02));
   border:1px solid rgba(163,139,93,.35);border-radius:12px;padding:18px;margin-bottom:16px;text-align:center
 }
-.modal-media img{width:100%;height:auto;display:inline-block;border-radius:8px;box-shadow:0 10px 40px rgba(163,139,93,.25)}
+.modal-media img{width:50%;height:auto;display:inline-block;border-radius:8px;box-shadow:0 10px 40px rgba(163,139,93,.25)}
 .modal-actions{display:flex;justify-content:center;gap:10px}
 
 /* ====== Responsive ====== */
